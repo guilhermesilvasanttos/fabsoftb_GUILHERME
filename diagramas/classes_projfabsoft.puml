@@ -1,0 +1,105 @@
+@startuml
+package br.univille.projfabsoft {
+    class Cliente {
+        - long id
+        - String nome
+        - String email
+        - String telefone
+        - String cpf
+        --
+        + long getId()
+        + void setId(long id)
+        + String getNome()
+        + void setNome(String nome)
+        + String getEmail()
+        + void setEmail(String email)
+        + String getTelefone()
+        + void setTelefone(String telefone)
+        + String getCpf()
+        + void setCpf(String cpf)
+    }
+
+    class ItemAvaliacao {
+        - long id
+        - String descricao
+        - String status
+        --
+        + long getId()
+        + void setId(long id)
+        + String getDescricao()
+        + void setDescricao(String descricao)
+        + String getStatus()
+        + void setStatus(String status)
+    }
+
+    class Norma {
+        - long id
+        - String codigo
+        - String descricao
+        --
+        + long getId()
+        + void setId(long id)
+        + String getCodigo()
+        + void setCodigo(String codigo)
+        + String getDescricao()
+        + void setDescricao(String descricao)
+    }
+
+    class Documento {
+        - long id
+        - String titulo
+        - String conteudo
+        --
+        + long getId()
+        + void setId(long id)
+        + String getTitulo()
+        + void setTitulo(String titulo)
+        + String getConteudo()
+        + void setConteudo(String conteudo)
+    }
+
+    class Projeto {
+        - long id
+        - String nome
+        - String status
+        --
+        + long getId()
+        + void setId(long id)
+        + String getNome()
+        + void setNome(String nome)
+        + String getStatus()
+        + void setStatus(String status)
+    }
+
+    class Usuario {
+        - long id
+        - String nome
+        - String email
+        --
+        + long getId()
+        + void setId(long id)
+        + String getNome()
+        + void setNome(String nome)
+        + String getEmail()
+        + void setEmail(String email)
+    }
+
+    class Divergencia {
+        - long id
+        - String descricao
+        --
+        + long getId()
+        + void setId(long id)
+        + String getDescricao()
+        + void setDescricao(String descricao)
+    }
+
+    Cliente "1" --> "*" ItemAvaliacao : cadastra
+    Cliente "1" --> "*" Documento : preenche
+    Cliente "1" --> "*" Projeto : gerencia
+    Projeto "1" --> "*" Divergencia : possui
+    Projeto "1" --> "*" Norma : consulta
+}
+@enduml
+
+//alt d
