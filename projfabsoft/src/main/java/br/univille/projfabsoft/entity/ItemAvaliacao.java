@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
 @Entity
-public class Itemavaliação {
+public class ItemAvaliacao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;

@@ -20,7 +20,7 @@ public class Usuario {
     @OneToMany
     private List<Cliente> cliente;
     @OneToMany
-    private List<Itemavaliação> itemavaliacao;
+    private List<ItemAvaliacao> itemavaliacao;
     @OneToMany
     private List<Projeto> projeto;
 
