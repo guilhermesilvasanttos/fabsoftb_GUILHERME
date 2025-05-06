@@ -5,7 +5,7 @@ import br.univille.projfabsoft.entity.Divergencia;
 
 public interface DivergenciaService {
     Divergencia save(Divergencia divergencia);
-    List<Divergencia> getALL();
+    List<Divergencia> getAll();
     Divergencia getById(Long id);
     Divergencia delete(Long id);
 

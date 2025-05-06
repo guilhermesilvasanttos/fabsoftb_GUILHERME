@@ -22,7 +22,7 @@ public class ClienteServiceimpl implements ClienteService {
     }
 
     @Override
-    public List<Cliente> getALL() {
+    public List<Cliente> getAll() {
        return repository.findAll();
     }
 
@@ -41,5 +41,7 @@ public class ClienteServiceimpl implements ClienteService {
             repository.deleteById(id);
         return cliente;
     }
+
+   
 
 }

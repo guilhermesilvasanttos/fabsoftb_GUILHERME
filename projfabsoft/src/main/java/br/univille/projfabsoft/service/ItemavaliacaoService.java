@@ -1,10 +1,10 @@
 package br.univille.projfabsoft.service;
 import br.univille.projfabsoft.entity.ItemAvaliacao;
-import br.univille.projfabsoft.service.ItemavaliacaoService;
+import br.univille.projfabsoft.service.ItemAvaliacaoService;
 import java.util.List;
 
-public interface ItemavaliacaoService {
-    ItemAvaliacao save(ItemAvaliacao projeto);
+public interface ItemAvaliacaoService {
+    ItemAvaliacao save(ItemAvaliacao itemavaliacao);
     List<ItemAvaliacao> getAll();
     ItemAvaliacao getById(Long id);
     ItemAvaliacao delete(Long id);

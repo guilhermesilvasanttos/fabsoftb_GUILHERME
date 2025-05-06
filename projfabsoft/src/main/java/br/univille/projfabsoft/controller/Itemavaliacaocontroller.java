@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.univille.projfabsoft.entity.ItemAvaliacao;
 import br.univille.projfabsoft.service.Itemavaliacao;
-import br.univille.projfabsoft.service.ItemavaliacaoService;
+import br.univille.projfabsoft.service.ItemAvaliacaoService;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,11 +22,11 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
-@RequestMapping("/api/v1/itemavaliacoes")
-public class Itemavaliacaocomtroller{
+@RequestMapping("/api/v1/item")
+public class Itemavaliacaocontroller{
 
     @Autowired
-    private ItemavaliacaoService service;
+    private ItemAvaliacaoService service;
     
     public String getMethodName(@RequestParam String param) {
         return new String();

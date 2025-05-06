@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/api/v1/documentos")
-public class Documentocomtroller {
+public class Documentocontroller {
 
     @Autowired
     private DocumentoService service;

@@ -5,6 +5,5 @@ import br.univille.projfabsoft.entity.Norma;
 
 @Repository
 public interface NormaRepository  
-    extends JpaRepository<Norma,Long> {
-    
+    extends JpaRepository<Norma,Long> { 
 }

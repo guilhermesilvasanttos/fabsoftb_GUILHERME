@@ -1,11 +1,12 @@
 package br.univille.projfabsoft.repository;
-import br.univille.projfabsoft.repository.ItemavaliacaoRepository;
+import br.univille.projfabsoft.entity.ItemAvaliacao;
+import br.univille.projfabsoft.repository.ItemAvaliacaoRepository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface ItemavaliacaoRepository  
-    extends JpaRepository<Itemavalicao,Long> {
+public interface ItemAvaliacaoRepository  
+    extends JpaRepository<ItemAvaliacao,Long> {
     
 }

@@ -18,11 +18,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import br.univille.projfabsoft.controller.DivergenciaComtroller;
+import br.univille.projfabsoft.controller.DivergenciaController;
 
 @RestController
 @RequestMapping("/api/v1/divergencias")
-public class DivergenciaComtroller {
+public class DivergenciaController {
 
     @Autowired
     private DivergenciaService service;
@@ -33,7 +33,7 @@ public class DivergenciaComtroller {
 
     @GetMapping
     public ResponseEntity<List<Divergencia>> getDivergencias() {
-        var listaDivergencias = service.getALL();
+        var listaDivergencias = service.getAll();
         return new ResponseEntity<List<Divergencia>>(listaDivergencias, HttpStatus.OK);
     }
 
