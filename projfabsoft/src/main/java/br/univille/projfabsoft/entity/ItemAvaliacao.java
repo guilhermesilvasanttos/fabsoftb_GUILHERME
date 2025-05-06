@@ -45,5 +45,25 @@ public class ItemAvaliacao {
     public void setStatus(String status) {
         this.status = status;
     }
+
+    public Object getAll() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getAll'");
+    }
+
+    public void save(ItemAvaliacao itemAvaliacao) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'save'");
+    }
+
+    public ItemAvaliacao getById(long id2) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getById'");
+    }
+
+    public void delete(long id2) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'delete'");
+    }
     
 }

@@ -1,18 +1,20 @@
 package br.univille.projfabsoft.service.impl;
 
 import java.util.List;
-import br.univille.projfabsoft.repository.ItemAvaliacaoRepository;
+import br.univille.projfabsoft.repository.ItemavaliacaoRepository;
 import br.univille.projfabsoft.entity.ItemAvaliacao;
-import br.univille.projfabsoft.service.ItemAvaliacaoService;
+import br.univille.projfabsoft.service.ItemavaliacaoService;
+
+
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
 
 @Service
-public class ItemAvaliacaoServiceimpl implements ItemAvaliacaoService {
+public class ItemavaliacaoServiceimpl implements ItemavaliacaoService {
 
     @Autowired
-    private ItemAvaliacaoRepository repository;
+    private ItemavaliacaoRepository repository;
 
     @Override
     public ItemAvaliacao save(ItemAvaliacao itemavaliacao) {
@@ -41,5 +43,6 @@ public class ItemAvaliacaoServiceimpl implements ItemAvaliacaoService {
         }
         return itemavaliacao;
     }
+
 }
 

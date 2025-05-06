@@ -10,8 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.univille.projfabsoft.entity.ItemAvaliacao;
-import br.univille.projfabsoft.service.Itemavaliacao;
-import br.univille.projfabsoft.service.ItemAvaliacaoService;
+import br.univille.projfabsoft.service.ItemavaliacaoService;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,7 +25,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class Itemavaliacaocontroller{
 
     @Autowired
-    private ItemAvaliacaoService service;
+    private ItemavaliacaoService service;
     
     public String getMethodName(@RequestParam String param) {
         return new String();
@@ -43,7 +42,7 @@ public class Itemavaliacaocontroller{
         if(itemAvaliacao == null){
             return ResponseEntity.badRequest().build();
         }
-        if (Itemavaliacao.getId() == 0){
+        if (itemAvaliacao.getId() == 0){
             service.save(itemAvaliacao);
             return new ResponseEntity<ItemAvaliacao>(itemAvaliacao, HttpStatus.OK);
         }
