@@ -9,5 +9,5 @@ import br.univille.projfabsoft.entity.Cliente;
 @Repository
 public interface ClienteRepository  
     extends JpaRepository<Cliente,Long> {
-    
+    //desgraça
 }
