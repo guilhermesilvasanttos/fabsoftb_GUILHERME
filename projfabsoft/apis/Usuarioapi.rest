@@ -11,4 +11,5 @@ Content-Type: application/json
 ### API Usuario - DELETE
 
 DELETE http://localhost:8080/api/v1/usuario
-Content-Type: application/json
+Content-Type: application/json 
+//poxa
