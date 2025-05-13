@@ -1,0 +1,14 @@
+### API ItemAvaliacao - GET
+GET http://localhost:8080/api/v1/item
+
+### API ItemAvaliacao - POST
+POST http://localhost:8080/api/v1/item
+Content-Type: application/json
+{ 
+    "descricao": "descricao",
+    "status": "status"
+}
+### API ItemAvaliacao - DELETE
+
+DELETE http://localhost:8080/api/v1/item
+Content-Type: application/json

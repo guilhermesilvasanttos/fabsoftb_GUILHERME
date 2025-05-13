@@ -1,0 +1,14 @@
+### API Norma - GET
+GET http://localhost:8080/api/v1/norma
+
+### API Norma - POST
+POST http://localhost:8080/api/v1/norma
+Content-Type: application/json
+{ 
+    "codigo": "codigo",
+    "descricao": "descrição"
+}
+### API Norma - DELETE
+
+DELETE http://localhost:8080/api/v1/norma
+Content-Type: application/json

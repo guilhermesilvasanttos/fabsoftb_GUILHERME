@@ -1,0 +1,13 @@
+### API Divergencia - GET
+GET http://localhost:8080/api/v1/divergencia
+
+### API Divergencia - POST
+POST http://localhost:8080/api/v1/divergencia
+Content-Type: application/json
+{ 
+    "descricao": "descricao",
+}
+### API Divergencia - DELETE
+
+DELETE http://localhost:8080/api/v1/divergencia/1
+Content-Type: application/json
