@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 
 @Service
-public class ItemavaliacaoServiceimpl implements ItemavaliacaoService {
+public class ItemAvaliacaoServiceImpl implements ItemavaliacaoService {
 
     @Autowired
     private ItemavaliacaoRepository repository;

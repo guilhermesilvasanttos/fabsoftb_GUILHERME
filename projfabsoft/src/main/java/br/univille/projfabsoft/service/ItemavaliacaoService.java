@@ -1,6 +1,5 @@
 package br.univille.projfabsoft.service;
 import br.univille.projfabsoft.entity.ItemAvaliacao;
-import br.univille.projfabsoft.service.ItemavaliacaoService;
 import java.util.List;
 
 public interface ItemavaliacaoService {
