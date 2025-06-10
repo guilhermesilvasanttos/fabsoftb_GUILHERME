@@ -13,4 +13,9 @@ export class ClienteService {
   getClientes(){
     return this.http.get<Cliente[]>(this.apiURL);
   }
+
+  saveCliente(cliente:Cliente){
+    return this.http.post(this.apiURL,cliente);
+  }
+
 }
