@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
-@RequestMapping("/api/v1/cliente")
+@RequestMapping("/api/v1/clientes")
 public class ClienteController {
     @Autowired
     private ClienteService service;
@@ -33,7 +33,7 @@ public class ClienteController {
     public ResponseEntity<List<Cliente>> getClientes(){
         var listaClientes = service.getAll();
 
-        return new ResponseEntity<List<Cliente>>(HttpStatus.OK);
+        return new ResponseEntity<List<Cliente>>(listaClientes,HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
