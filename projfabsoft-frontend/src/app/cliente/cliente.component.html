@@ -1,6 +1,6 @@
 <main class="container">
     <h2>Clientes</h2>
-    <a routerLink="/clientes/novo" class="btn btn-primary">NOVO</a>
+    <a (click)="novo()" class="btn btn-primary">NOVO</a>
     <table class="table">
         <thead>
             <tr>
@@ -9,15 +9,18 @@
                 <th>Email</th>
                 <th>Telefone</th>
                 <th>cpf</th>
+                <th></th>
             </tr>
         </thead>
-
         <tbody>            
             <tr *ngFor="let umCliente of listaClientes">
                 <td>{{umCliente.nome}}</td>
                 <td>{{umCliente.email}}</td>
                 <td>{{umCliente.telefone}}</td>
                 <td>{{umCliente.cpf}}</td>
+
+                <td><a (click)="alterar(umCliente)"
+                    class="btn btn-secondary">alterar</a></td>
             </tr>
         </tbody>
     </table>
