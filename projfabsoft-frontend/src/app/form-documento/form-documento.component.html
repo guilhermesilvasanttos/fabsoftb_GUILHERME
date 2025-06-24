@@ -1,0 +1,29 @@
+<main class="container">
+    <h2>Documento</h2>
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="txtid">ID</label>
+                <input type="text" id=""
+                    [(ngModel)]="documento.id"
+                    class="form-control"
+                    id="txtid">     
+            </div>  
+            <div class="form-group">
+                        <label for="txttitulo">Titulo</label>
+                        <input type="text" id=""
+                            [(ngModel)]="documento.titulo"
+                            class="form-control"
+                            id="txttitulo">     
+            </div>  
+            <div class="form-group">
+                        <label for="txtconteudo">Conteudo</label>
+                        <input type="text" id=""
+                            [(ngModel)]="documento.conteudo"
+                            class="form-control"
+                            id="txtemail">     
+            </div>                   
+        </div>
+            <button (click)="salvar()" class="btn-btn-primary">Salvar</button>
+    </div>
+</main>

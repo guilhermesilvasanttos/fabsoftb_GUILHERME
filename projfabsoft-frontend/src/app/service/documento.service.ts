@@ -10,18 +10,18 @@ export class DocumentoService {
   
   constructor(private http:HttpClient) { }
 
-  getClientes(){
+  getDocumento(){
     return this.http.get<Documento[]>(this.apiURL);
   }
 
-  saveCliente(documento:Documento){
+  saveDocumento(documento:Documento){
     if(documento.id){
       return this.http.put(this.apiURL + '/' + documento.id, documento);
     }
     return this.http.post(this.apiURL,documento);
   }
 
-  getClienteById(id: any) {
+  getDocumentoById(id: any) {
     return this.http.get<Documento>(this.apiURL + '/' + id);
 
   }

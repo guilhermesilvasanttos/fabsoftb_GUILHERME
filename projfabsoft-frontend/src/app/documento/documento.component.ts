@@ -13,27 +13,27 @@ import { Router } from '@angular/router'
   providers: [DocumentoService, Router]
 })
 export class DocumentoComponent {
-    listaClientes: Documento[] = [];
+    listaDocumento: Documento[] = [];
 
     constructor(private documentoService: DocumentoService,
       private router:Router
     ){}
 
     novo(){
-      this.router.navigate(['clientes/novo']);
+      this.router.navigate(['documento/novo']);
     }
 
     ngOnInit(){
       console.log("Carregando Documento");
       this.documentoService.getDocumento().subscribe(
-        Documento => {
+        documento => {
           this.listaDocumento = documento;
         }
       )    
     }
 
-      alterar(cliente:Documento){
-        this.router.navigate(['documento/alterar', Documento.id]);
+      alterar(documento:Documento){
+        this.router.navigate(['documento/alterar', documento.id]);
       }
 
 }

@@ -1,1 +1,15 @@
-<p>itemavaliacao works!</p>
+<main class="container">
+    <h2>Itemavaliação</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umCliente of listaClientes">
+                <td>{{umCliente.nome}}</td>
+            </tr>
+        </tbody>
+    </table>
+</main>

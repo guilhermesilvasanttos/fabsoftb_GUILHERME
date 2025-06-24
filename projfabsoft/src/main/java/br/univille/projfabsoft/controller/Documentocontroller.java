@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.univille.projfabsoft.entity.Documento;
+import br.univille.projfabsoft.entity.Documento;
 import br.univille.projfabsoft.service.DocumentoService;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -20,7 +21,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
-@RequestMapping("/api/v1/documentos")
+@RequestMapping("/api/v1/documento")
 public class Documentocontroller {
 
     @Autowired
@@ -33,7 +34,14 @@ public class Documentocontroller {
     @GetMapping
     public ResponseEntity<List<Documento>> getDocumentos() {
         var listaDocumentos = service.getAll();
-        return new ResponseEntity<List<Documento>>(HttpStatus.OK);
+        return new ResponseEntity<List<Documento>>(listaDocumentos,HttpStatus.OK);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Documento> getDocumentoId(@PathVariable long id){
+        var umDocumento = service.getById(id);
+
+        return new ResponseEntity<Documento>(umDocumento, HttpStatus.OK);
     }
 
     @PostMapping

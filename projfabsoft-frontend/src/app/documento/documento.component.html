@@ -1,1 +1,19 @@
-<p>documento works!</p>
+<main class="container">
+    <h2>Documento</h2>
+    <a (click)="novo()" class="btn btn-primary">NOVO</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>titulo</th>
+                <th>conteudo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let umDocumento of listaDocumento">
+                <td>{{umDocumento.titulo}}</td>
+                <td>{{umDocumento.conteudo}}</td>
+            </tr>
+        </tbody>
+    </table>
+</main>

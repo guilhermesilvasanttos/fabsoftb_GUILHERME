@@ -1,9 +1,19 @@
 ### API Documento - GET
 GET http://localhost:8080/api/v1/documento
 
+### API DOCUMENTO - PUT
+PUT http://localhost:8080/api/v1/documento/1
+Content-Type: application/json
+
+{ 
+    "titulo": "Zezinho da silva",
+    "conteudo": "Zez@x.com.br"
+}
+
 ### API Documento - POST
 POST http://localhost:8080/api/v1/documento
 Content-Type: application/json
+
 { 
     "titulo": "titulo",
     "conteudo": "conteudo"

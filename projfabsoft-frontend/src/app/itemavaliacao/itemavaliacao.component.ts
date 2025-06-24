@@ -9,14 +9,14 @@ import { Itemavaliacao } from '../model/itemavaliacao';
 @Component({
   selector: 'app-documento',
   imports: [HttpClientModule, CommonModule,],
-  templateUrl: './documento.component.html',
-  styleUrl: './documento.component.css',
+  templateUrl: './itemavaliacao.component.html',
+  styleUrl: './itemavaliacao.component.css',
   providers: [ItemavaliacaoService, Router]
 })
-export class ClienteComponent {
-    listaClientes: Documento[] = [];
+export class ItemavaliacaoComponent {
+    listaItemavaliacao: Itemavaliacao[] = [];
 
-    constructor(private itemavaliacaoService: ItemavaliacaoService,
+    constructor(private ItemavaliacaoService: ItemavaliacaoService,
       private router:Router
     ){}
 
@@ -25,16 +25,16 @@ export class ClienteComponent {
     }
 
     ngOnInit(){
-      console.log("Carregando Documento");
-      this.itemavaliacaoService.getClientes().subscribe(
+      console.log("Carregando Avaliação");
+      this.ItemavaliacaoService.getItemavaliacao().subscribe(
         Itemavaliacao => {
-          this.listaClientes = Itemavaliacao;
+          this.listaItemavaliacao = Itemavaliacao;
         }
       )    
     }
 
-      alterar(cliente:Documento){
-        this.router.navigate(['itemavaliacao/alterar', Itemavaliacao.id]);
+      alterar(itemavaliacao:Itemavaliacao){
+        this.router.navigate(['itemavaliacao/alterar', itemavaliacao.id]);
       }
 
 }
